@@ -3,7 +3,7 @@ startForm.addEventListener('submit',redirect);
 
 function redirect(event) {
     event.preventDefault();
-    let baseURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+    let baseURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
     alert(baseURL);
     //window.location.href = baseURL + "WDD330-BudgetingApp/budget.html";
     //alert('got here');
