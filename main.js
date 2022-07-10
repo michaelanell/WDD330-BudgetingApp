@@ -3,8 +3,8 @@ startForm.addEventListener('submit',redirect);
 
 function redirect(event) {
     event.preventDefault();
-    alert(window.location.protocol + "//" + window.location.host + "/" );
-    //window.location.href = "";
+    let baseURL = window.location.protocol + "//" + window.location.host + "/";
+    window.location.href = baseURL + "budget.html";
     alert('got here');
     /*
     var startOption = document.getElementsByName("start_option");
