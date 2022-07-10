@@ -17,14 +17,14 @@ function redirect(event) {
     }
 
     if (result == "Create a Monthly Budget") {
-        window.location.href = "//budget.html";
+        window.location.href = baseURL + "/budget.html";
 
 
     } else if (result == "Create a Savings Goal") {
-        window.location.href = "http://www.w3schools.com";
+        window.location.href = baseURL + "/savings.html";
 
 
     } else {
-        window.location.href = "http://www.w3schools.com";
+        window.location.href = baseURL + "/expenses.html";
     }*/
     }
