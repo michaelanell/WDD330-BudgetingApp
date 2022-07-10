@@ -5,7 +5,7 @@ function redirect(event) {
     event.preventDefault();
     let baseURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
     alert(baseURL);
-    window.location.href = baseURL + "/budget.html";
+    window.location.href = baseURL + "budget.html";
     //alert('got here');
     /*
     var startOption = document.getElementsByName("start_option");
@@ -17,14 +17,14 @@ function redirect(event) {
     }
 
     if (result == "Create a Monthly Budget") {
-        window.location.href = baseURL + "/budget.html";
+        window.location.href = baseURL + "budget.html";
 
 
     } else if (result == "Create a Savings Goal") {
-        window.location.href = baseURL + "/savings.html";
+        window.location.href = baseURL + "savings.html";
 
 
     } else {
-        window.location.href = baseURL + "/expenses.html";
+        window.location.href = baseURL + "expenses.html";
     }*/
     }
