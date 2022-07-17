@@ -1,6 +1,16 @@
 //import {drawChart} from 'chart.js';
 const budgetForm = document.forms['user-info'];
 budgetForm.addEventListener('submit', getBudget);
+budgetForm.other_expenses_yes.addEventListener('click', displayOtherExpense);
+budgetForm.other_expenses_no.addEventListener('click', hideOtherExpense);
+
+function displayOtherExpense() {
+    document.getElementById("other_expenses_amount").style.display = "block";
+}
+
+function hideOtherExpense() {
+    document.getElementById("other_expenses_amount").style.display = "none";
+}
 
 function getBudget(event) {
     event.preventDefault();
@@ -8,7 +18,6 @@ function getBudget(event) {
 }
 
 // Create a user object that hold's users financial information
-
 const user = {
     income : 0,
     numPeople: 0,
@@ -73,7 +82,7 @@ function drawChart() {
         ['Car Payment', user.carPayment],
         ['Utilities',  user.utilities],
         ['Donations', user.donations],
-        ['Subscriptions', user.subscriptions]
+        ['Subscriptions', user.subscriptions],
         ['Other',  user.other],
         ['Remaining', user.remaining]
 
@@ -84,7 +93,7 @@ function drawChart() {
       title: 'Monthly Budget'
     };
 
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    var chart = new google.visualization.PieChart(document.getElementById('main-content-holder'));
 
     chart.draw(data, options);
   }
