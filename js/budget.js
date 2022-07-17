@@ -20,6 +20,8 @@ const user = {
     donations: 0,
     subscriptions: 0,
     phoneBill: 0,
+    other: 0,
+    remaining: 0,
 
 }
 
@@ -49,8 +51,8 @@ let sum = 0;
     sum += user.subscriptions;
     sum += user.phoneBill;
 
-    remaining = user.income - sum;
-    alert(remaining);
+    user.remaining = user.income - sum;
+    alert(user.remaining);
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
 }
@@ -72,20 +74,14 @@ function drawChart() {
         ['Utilities',  user.utilities],
         ['Donations', user.donations],
         ['Subscriptions', user.subscriptions]
-      ]);
+        ['Other',  user.other],
+        ['Remaining', user.remaining]
 
-    /*var data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Rent',     rent],
-        ['Eat',      2],
-        ['Commute',  2],
-        ['Watch TV', 2],
-        ['Sleep',    7]
-      ]);*/
+      ]);
 
 
     var options = {
-      title: 'My Daily Activities'
+      title: 'Monthly Budget'
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
