@@ -5,8 +5,6 @@ function redirect(event) {
     event.preventDefault();
     let baseURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
     alert(baseURL);
-    //window.location.href = baseURL + "budget.html";
-    //alert('got here');
     
     var startOption = document.getElementsByName("start_option");
     let result = "";

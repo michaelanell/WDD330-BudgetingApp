@@ -5,63 +5,80 @@
     <title>Create a Monthly Budget</title>
     <meta name="description" content="Our first page">
     <meta name="keywords" content="html tutorial template">
+    <link rel="stylesheet" href="css/small.css">
 </head>
 
 <body>
-    <div id="main-content-holder">
-        <!-- Initial budgeting form -->
-        <form name='user-info' action='/search'>
-            <label for='net_income'>What is your monthly household net income?<br>
-                "also known as your “take-home pay.” This is the money you have left over after payroll deductions. Net
-                income is the money you earn that you can actually pay bills, spend on necessities, save and more."
-                https://www.bankrate.com/banking/how-to-make-a-monthly-budget/<br>
-                <input type='number' name='net_income' id='net_income'>
-            </label><br>
-            <label for="num_people">How many people are in your household?<br>
-                <input type="number" name="num_people" id="num_people">
-            </label><br>
-            <label for='rent_amount'>What is the amount you spend on your rent or mortgage each month?<br>
-                <input type='number' name='rent_amount' id='rent_amount'>
-            </label><br>
-            <label for="utilities">What is your monthly utility amount? (Water and electricity bill)<br>
-                <input type="number" name="utilities" id="utilities">
-            </label><br>
-            <label for='car_payment'>What is your monthly car payment?<br>
-                <input type='number' name='car_payment' id='car_payment'>
-            </label><br>
-            <label for='school_payment'>What is your monthly school payment?<br>
-                <input type='number' name="school_payment" id="school_payment">
-            </label><br>
-            <label for="car_insurance">What do you pay for car insurace each month?<br>
-                <input type="number" name="car_insurance" id="car_insurance">
-            </label><br>
-            <label for="donations">What amount of charitable donations you make each month?<br>
-                <input type="number" name="donations" id="donations">
-            </label><br>
-            <label for="subscriptions">What is the amount you pay each month on subscriptions? (Netflix,
-                Spotify,
-                Gym,
-                etc)<br>
-                <input type="number" name="subscriptions" id="subscriptions">
-            </label><br>
-            <label for="phone_bill">What is your monthly phone bill?<br>
-                <input type="number" name="subscriptions" id="phone_bill">
-            </label><br>
-            <p>Do you have any other expenses?</p>
-            <label for="other_expenses_yes">Yes
-                <input type="radio" name="other_expenses" value='Yes' id='other_expenses_yes'>
-            </label>
-            <label for="other-expenses-no">No
-                <input type="radio" name="other_expenses" value='No' id='other_expenses_no'>
-            </label><br>
-            <label for="other-expenses_amount">Other fixed expenses amount?
-                <input type="radio" name="other-expenses_amount" value='No' id='other-expenses_amount'>
-            </label><br>
+    <div id="site_inner">
+        <a href="index.html"><button type="button">Back</button></a>
+        <div id="main-content-holder">
+            <h1>First, please answer some questions</h1>
+            <!-- Initial budgeting form -->
+            <form name='user-info' action='/search'>
+                <label for='net_income'>What is your monthly household net income?<br>
+                    <span id="income-explanation">"also known as your “take-home pay.” This is the money you have left
+                        over after payroll
+                        deductions. Net income is the money you earn that you can actually pay bills, spend on
+                        necessities, save and more."</span>
+                    https://www.bankrate.com/banking/how-to-make-a-monthly-budget/<br>
+                    <input type='number' name='net_income' id='net_income' min=0 required>
+                </label><br>
+                <label for="num_people">How many people are in your household?<br>
+                    <input type="number" name="num_people" id="num_people" min=0 required>
+                </label><br>
+                <label for='rent_amount'>What is the amount you spend on your rent or mortgage each month?<br>
+                    <input type='number' name='rent_amount' id='rent_amount' min=0 required>
+                </label><br>
+                <label for="utilities">What is your monthly utility amount? (Water and electricity bill)<br>
+                    <input type="number" name="utilities" id="utilities" min=0 required>
+                </label><br>
+                <label for='car_payment'>What is your monthly car payment?<br>
+                    <input type='number' name='car_payment' id='car_payment' min=0>
+                </label><br>
+                <label for='school_payment'>What is your monthly school payment?<br>
+                    <input type='number' name="school_payment" id="school_payment" min=0>
+                </label><br>
+                <label for="car_insurance">What do you pay for car insurace each month?<br>
+                    <input type="number" name="car_insurance" id="car_insurance" min=0 required>
+                </label><br>
+                <label for="donations">What amount of charitable donations you make each month?<br>
+                    <input type="number" name="donations" id="donations" min=0>
+                </label><br>
+                <label for="subscriptions">What is the amount you pay each month on subscriptions? (Netflix,
+                    Spotify,
+                    Gym,
+                    etc)<br>
+                    <input type="number" name="subscriptions" id="subscriptions" min=0>
+                </label><br>
+                <label for="phone_bill">What is your monthly phone bill?<br>
+                    <input type="number" name="subscriptions" id="phone_bill" min=0>
+                </label><br>
+                <p>Do you have any other fixed expenses? (excluding groceries)</p>
+                <label for="other_expenses_yes">Yes
+                    <input type="radio" name="other_expenses" value='Yes' id='other_expenses_yes'>
+                </label>
+                <label for="other_expenses_no">No
+                    <input type="radio" name="other_expenses" value='No' id='other_expenses_no'>
+                </label><br>
+                <label id="other_expenses_amount" for="other_expenses_amount">Other fixed expenses amount?<br>
+                    <input type="number" name="other_expenses_amount" min=0>
+                </label><br>
 
-            </label> <button type='submit'>Submit</button>
-        </form>
+                </label> <button type='submit'>Submit</button>
+            </form>
+        </div>
+        <div id="three_options-container">
+            <h2>Pick an option</h2>
+            <div id="option_one"></div>
+            <div id="option_two"></div>
+            <div id="option_three"></div>
+        </div>
+        <div>
+            <h2>Don't see anyting that works for you?<br>
+                <h3>Make adjustments to your budget plan:</h3>
+            </h2>
+        </div>
     </div>
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
 </body>
 <footer>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

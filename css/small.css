@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap');
+
+* {
+    font-family: 'Sarabun', sans-serif;
+}
+
+#site_inner {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+button {
+    background-color: #6A0DAD;
+    border-color: #6A0DAD;
+    color: #fff;
+    border-radius:10px;
+    padding: 5px 10px;
+}
+
+input {
+    margin-top: 3px;
+    margin-bottom: 10px;
+}
+
+#income-explanation {
+    font-style: italic;
+}
+
+#other_expenses_amount {
+    display: none;
+}
