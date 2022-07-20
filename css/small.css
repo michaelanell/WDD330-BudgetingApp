@@ -9,12 +9,29 @@
     margin: 20px auto;
 }
 
+h1, h2 {
+    text-align: center;
+}
+
 button {
     background-color: #6A0DAD;
     border-color: #6A0DAD;
     color: #fff;
     border-radius:10px;
     padding: 5px 10px;
+}
+
+.option_contanter {
+    display: grid;
+    justify-items: center;
+}
+
+.select_option_button{
+    width: 115px;
+}
+
+#select_custom {
+    display: none;;
 }
 
 input {
@@ -27,5 +44,17 @@ input {
 }
 
 #other_expenses_amount {
+    display: none;
+}
+
+#three_options_container {
+    display: none;
+}
+
+.budget_options {
+    height: 400px;
+}
+
+#customize_plan {
     display: none;
 }

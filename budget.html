@@ -67,16 +67,43 @@
                 </label> <button type='submit'>Submit</button>
             </form>
         </div>
-        <div id="three_options-container">
+        <div id="three_options_container">
             <h2>Pick an option</h2>
-            <div id="option_one"></div>
-            <div id="option_two"></div>
-            <div id="option_three"></div>
+            <div class="option_contanter">
+                <div id="option_one" class="budget_options"></div>
+                <button id="select_one" class="select_option_button">Select this plan</button>
+            </div>
+            <div class="option_contanter">
+                <div id="option_two" class="budget_options"></div>
+                <button id="selct_two" class="select_option_button">Select this plan</button>
+            </div>
+            <div class="option_contanter">
+                <div id="option_three" class="budget_options"></div>
+                <button id="select_three" class="select_option_button">Select this plan</button>
+
+            </div>
         </div>
-        <div>
-            <h2>Don't see anyting that works for you?<br>
-                <h3>Make adjustments to your budget plan:</h3>
-            </h2>
+        <div id="customize_plan">
+            <h2>Don't see anyting that works for you?</h2><br>
+            <h3>Make adjustments to your budget plan:</h3>
+            <form name='customize_info'>
+                <label for="custom_groceries">How much would you like to spend on groceries each month?<br>
+                    <input type="number" name="custom_groceries" id="custom_groceries" min=0>
+                </label><br>
+                <label for="custom_savings">How much would you like to save each month?<br>
+                    <input type="number" name="custom_savings" id="custom_savings" min=0>
+                </label><br>
+                <label for="custom_misc">What would you like your entertainment/discretionary fund to be each
+                    month?<br>
+                    'Spending money' - money spent on entertainment, eating out, etc.<br>
+                    <input type="number" name="custom_misc" id="custom_misc" min=0>
+                </label><br>
+                <button type='submit'>Submit</button>
+            </form>
+
+            <div id="display_custom" class="budget_options">
+            </div>
+            <button id="select_custom" class="select_option_button">Select this plan</button>
         </div>
     </div>
 </body>
@@ -84,6 +111,5 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="js/budget.js"></script>
 </footer>
-
 
 </html>
