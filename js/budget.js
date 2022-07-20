@@ -8,6 +8,11 @@ budgetForm.other_expenses_no.addEventListener('click', hideOtherExpense);
 const customInfo = document.forms['customize_info'];
 customInfo.addEventListener('submit', customizeValues);
 
+document.getElementById("select_one").addEventListener('click', selectRecommended);
+document.getElementById("selct_two").addEventListener('click', selectOption2);
+document.getElementById("select_three").addEventListener('click', selectOption3);
+document.getElementById("select_custom").addEventListener('click', selectCustom);
+
 
 function displayOtherExpense() {
     document.getElementById("other_expenses_amount").style.display = "block";
@@ -129,13 +134,12 @@ function calculateMisc() {
 function customizeValues(event) {
     event.preventDefault();
     groceryAmount = Number(customInfo.custom_groceries.value);
+    alert(groceryAmount);
     savingsAmount = Number(customInfo.custom_savings.value);
     spendingAmount = Number(customInfo.custom_misc.value);
 
-    alert('Here!');
-
     if (groceryAmount > 0) {
-        user.groceries = groceryAmount;
+        user.grocery = groceryAmount;
     }
 
     if (groceryAmount > 0) {
@@ -307,5 +311,25 @@ function drawCustom() {
       var chart = new google.visualization.PieChart(document.getElementById('display_custom'));
 
       chart.draw(data, options);
+
+}
+
+function selectRecommended() {
+    window.location.href = "http://www.w3schools.com";
+
+}
+
+function selectOption2() {
+    window.location.href = "http://www.w3schools.com";
+
+}
+
+function selectOption3() {
+    window.location.href = "http://www.w3schools.com";
+
+}
+
+function selectCustom() {
+    window.location.href = "http://www.w3schools.com";
 
 }
