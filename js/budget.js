@@ -1,4 +1,6 @@
 //import {drawChart} from 'chart.js';
+
+
 google.charts.load('current', {'packages':['corechart']});
 const budgetForm = document.forms['user-info'];
 budgetForm.addEventListener('submit', getBudget);
@@ -49,7 +51,8 @@ const user = {
     grocery: 0,
     unexpectedExpenses: 0,
     savings: 0,
-    misc: 0
+    misc: 0,
+    selectedPlan: ""
 
 }
 
@@ -161,7 +164,6 @@ function displayOptions() {
 
 }
 
-
 ////////////////////////////////////// Chart drawing functions //////////////////////////////////////
 function drawChart() {
 
@@ -192,7 +194,7 @@ function drawChart() {
     var chart = new google.visualization.PieChart(document.getElementById('expenses_breakdown'));
 
     chart.draw(data, options);
-  }
+}
 
 function drawOptionOne() {
 
@@ -315,17 +317,23 @@ function drawCustom() {
 }
 
 function selectRecommended() {
+    user.selectedPlan = "Recommended";
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
 }
 
 function selectOption2() {
+    user.selectedPlan = "Option2";
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
 }
 
 function selectOption3() {
+    user.selectedPlan = "Option3";
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
 }
 
 function selectCustom() {
+    user.selectedPlan = "Custom";
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
 }
+
+export {user};
