@@ -11,7 +11,7 @@
 <body>
     <div id="site_inner">
         <a href="index.html"><button type="button">Back</button></a>
-        <div id="main-content-holder">
+        <div id="user_expenses_collection">
             <h1>First, please answer some questions</h1>
             <!-- Initial budgeting form -->
             <form name='user-info' action='/search'>
@@ -63,10 +63,12 @@
                 <label id="other_expenses_amount" for="other_expenses_amount">Other fixed expenses amount?<br>
                     <input type="number" name="other_expenses_amount" min=0>
                 </label><br>
-
-                </label> <button type='submit'>Submit</button>
+                <button type='submit'>Submit</button>
             </form>
         </div>
+
+        <div id="expenses_breakdown"></div>
+
         <div id="three_options_container">
             <h2>Pick an option</h2>
             <div class="option_contanter">
@@ -100,10 +102,11 @@
                 </label><br>
                 <button type='submit'>Submit</button>
             </form>
-
-            <div id="display_custom" class="budget_options">
+            <div class="option_contanter">
+                <div id="display_custom" class="budget_options">
+                </div>
+                <button id="select_custom" class="select_option_button">Select this plan</button>
             </div>
-            <button id="select_custom" class="select_option_button">Select this plan</button>
         </div>
     </div>
 </body>

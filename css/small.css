@@ -9,6 +9,8 @@
     margin: 20px auto;
 }
 
+
+
 h1, h2 {
     text-align: center;
 }
@@ -19,6 +21,10 @@ button {
     color: #fff;
     border-radius:10px;
     padding: 5px 10px;
+}
+
+#expenses_breakdown {
+    height: 500px;
 }
 
 .option_contanter {

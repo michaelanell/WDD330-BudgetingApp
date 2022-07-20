@@ -152,7 +152,6 @@ function customizeValues(event) {
 
 ////////////////////////////////////// Display budget options //////////////////////////////////////
 function displayOptions() {
-    document.getElementById("main-content-holder").style.height = "500px";
     document.getElementById("three_options_container").style.display = "block";
     document.getElementById("customize_plan").style.display = "block";
 
@@ -182,10 +181,11 @@ function drawChart() {
 
 
     var options = {
-      title: 'Your current monthly expenses breakdown'
+        'legend':'bottom',
+        'title': 'Your current monthly expenses breakdown'
     };
 
-    var chart = new google.visualization.PieChart(document.getElementById('main-content-holder'));
+    var chart = new google.visualization.PieChart(document.getElementById('expenses_breakdown'));
 
     chart.draw(data, options);
   }
