@@ -316,20 +316,16 @@ function drawCustom() {
 
 function selectRecommended() {
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
-
 }
 
 function selectOption2() {
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
-
 }
 
 function selectOption3() {
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
-
 }
 
 function selectCustom() {
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
-
 }
