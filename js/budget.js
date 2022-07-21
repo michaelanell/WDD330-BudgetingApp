@@ -68,18 +68,18 @@ let sum = 0;
     sum += user.phoneBill;
 
     user.remaining = user.income - sum;
-    alert(user.remaining);
+    //alert(user.remaining);
 }
 
 function calculateGrocery() {
     if (user.remaining >= (user.numPeople * 200)) {
         user.grocery = user.numPeople * 200;
-        alert(user.grocery);
+       // alert(user.grocery);
     } else {
         user.grocery = user.remaining;
     }
     user.remaining -= user.grocery;
-    alert(user.remaining);
+    //alert(user.remaining);
 }
 
 function calculateUnexpected() {
@@ -264,7 +264,7 @@ function drawOptionThree() {
 
 function drawCustom() {
     let groceryAmount = Number(customInfo.custom_groceries.value);
-    alert(groceryAmount);
+    //alert(groceryAmount);
     let savingsAmount = Number(customInfo.custom_savings.value);
     let spendingAmount = Number(customInfo.custom_misc.value);
     let unexpectedExpenses = Number(customInfo.custom_unexpected.value);
