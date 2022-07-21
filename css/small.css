@@ -10,11 +10,10 @@
 }
 
 nav {
-    
-    background-color:#527CB3;
+    background-color:#66ADA2;
     text-align: center;
-    border-radius: 20px;
-    padding: .5rem;
+    border-radius: 15px;
+    padding: 1px;
     margin-bottom: 20px;
 }
 
@@ -25,19 +24,23 @@ nav ul {
 
 nav ul li {
     width: 100px;
-    
+
 }
 
 
 nav ul li a {
     color: #fff;
     text-align: center;
-    padding: 0.75rem;
     text-decoration: none;
-    font-size: 0.95rem;
-
+    font-size: 1.3rem;
 }
 
+nav ul li a:hover {
+    color:#66ADA2;
+    background-color:#87FAE8;
+    padding:5px;
+    border-radius: 5px;
+}
 
 h1, h2 {
     text-align: center;
