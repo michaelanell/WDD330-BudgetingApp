@@ -116,23 +116,6 @@ function calculateMisc() {
 
 function customizeValues(event) {
     event.preventDefault();
-    groceryAmount = Number(customInfo.custom_groceries.value);
-    alert(groceryAmount);
-    savingsAmount = Number(customInfo.custom_savings.value);
-    spendingAmount = Number(customInfo.custom_misc.value);
-
-    if (groceryAmount > 0) {
-        user.grocery = groceryAmount;
-    }
-
-    if (groceryAmount > 0) {
-        user.savings = savingsAmount;
-    }
-
-    if (groceryAmount > 0) {
-        user.misc = spendingAmount;
-    }
-
     google.charts.setOnLoadCallback(drawCustom);
     document.getElementById("select_custom").style.display = "block";
 }
@@ -244,6 +227,11 @@ function drawOptionTwo() {
 }
 
 function drawOptionThree() {
+    let grocery = user.grocery * 1.25;
+    let misc = user.misc * 1.25;
+    let unexpected = user.unexpectedExpenses * 1.25;
+    let savings = user.savings + (user.grocery - grocery) + (user.misc - misc) + (user.unexpectedExpenses - unexpected);
+
 
     var data = google.visualization.arrayToDataTable([
         ['Expense', 'Amount'],
@@ -257,10 +245,10 @@ function drawOptionThree() {
         ['Donations', user.donations],
         ['Subscriptions', user.subscriptions],
         ['Other',  user.other],
-        ['Groceries', user.grocery],
-        ['Unexpected Expenses', user.unexpectedExpenses],
-        ['Entertainment', user.misc],
-        ['Savings', user.savings]
+        ['Groceries', grocery],
+        ['Unexpected Expenses', unexpected],
+        ['Entertainment', misc],
+        ['Savings', savings]
 
       ]);
 
@@ -275,6 +263,12 @@ function drawOptionThree() {
 }
 
 function drawCustom() {
+    groceryAmount = Number(customInfo.custom_groceries.value);
+    alert(groceryAmount);
+    savingsAmount = Number(customInfo.custom_savings.value);
+    spendingAmount = Number(customInfo.custom_misc.value);
+    unexpectedExpenses = Number(customInfo.custom_unexpected.value);
+
     var data = google.visualization.arrayToDataTable([
         ['Expense', 'Amount'],
         ['Rent/Mortgage', user.rent],
@@ -287,10 +281,10 @@ function drawCustom() {
         ['Donations', user.donations],
         ['Subscriptions', user.subscriptions],
         ['Other',  user.other],
-        ['Groceries', user.grocery],
-        ['Unexpected Expenses', user.unexpectedExpenses],
-        ['Entertainment', user.misc],
-        ['Savings', user.savings]
+        ['Groceries', groceryAmount],
+        ['Unexpected Expenses', unexpectedExpenses],
+        ['Entertainment', spendingAmount],
+        ['Savings', savingsAmount]
 
       ]);
 
@@ -326,12 +320,22 @@ function selectOption2() {
 
 function selectOption3() {
     user.selectedPlan = "Option3";
+    user.savings = user.savings + (user.grocery - (user.grocery *1.25)) + (user.misc - (user.misc *1.25)) + (user.unexpectedExpenses - (user.unexpectedExpenses *1.25));
+    user.grocery = user.grocery * 1.25;
+    user.misc  = user.misc * 1.25;
+    user.unexpectedExpenses = user.unexpectedExpenses * 1.25;
+   
     window.localStorage.setItem("user", JSON.stringify(user));
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
 }
 
 function selectCustom() {
     user.selectedPlan = "Custom";
+    user.grocery = Number(customInfo.custom_groceries.value);
+    user.savings = Number(customInfo.custom_savings.value);
+    user.misc = Number(customInfo.custom_misc.value);
+    user.unexpectedExpenses = Number(customInfo.custom_unexpected.value);
+    
     window.localStorage.setItem("user", JSON.stringify(user));
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
 }
