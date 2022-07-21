@@ -1,5 +1,6 @@
 //import {user} from './user.js';
 let user = window.localStorage.getItem("user");
+console.log(user);
 console.log(JSON.parse(user));
 console.log(user.rent);
 google.charts.load('current', {'packages':['corechart']});
