@@ -313,6 +313,12 @@ function selectRecommended() {
 }
 
 function selectOption2() {
+    user.savings = user.savings + (user.grocery * .25) + (user.misc  * .25) + (user.unexpectedExpenses * .25);
+    user.grocery  = user.grocery * .75;
+    user.misc = user.misc * .75;
+    user.unexpectedExpenses = user.unexpectedExpenses * .75 ;
+    
+
     user.selectedPlan = "Option2";
     window.localStorage.setItem("user", JSON.stringify(user));
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
