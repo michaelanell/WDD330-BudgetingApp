@@ -10,6 +10,7 @@ function redirect(event) {
     for (let i = 0; i < startOption.length; i++) {
         if (startOption[i].checked) {
             result = startOption[i].value;
+            console.log(startOption[i].value);
         }
     }
 
