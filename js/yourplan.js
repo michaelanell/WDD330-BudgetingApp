@@ -2,6 +2,7 @@
 let user = window.localStorage.getItem("user");
 console.log(user);
 console.log(JSON.parse(user));
+user = JSON.parse(user);
 console.log(user.rent);
 google.charts.load('current', {'packages':['corechart']});
 window.addEventListener('load', displayPlan);
