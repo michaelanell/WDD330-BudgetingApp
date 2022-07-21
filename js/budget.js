@@ -263,11 +263,11 @@ function drawOptionThree() {
 }
 
 function drawCustom() {
-    groceryAmount = Number(customInfo.custom_groceries.value);
+    let groceryAmount = Number(customInfo.custom_groceries.value);
     alert(groceryAmount);
-    savingsAmount = Number(customInfo.custom_savings.value);
-    spendingAmount = Number(customInfo.custom_misc.value);
-    unexpectedExpenses = Number(customInfo.custom_unexpected.value);
+    let savingsAmount = Number(customInfo.custom_savings.value);
+    let spendingAmount = Number(customInfo.custom_misc.value);
+    let unexpectedExpenses = Number(customInfo.custom_unexpected.value);
 
     var data = google.visualization.arrayToDataTable([
         ['Expense', 'Amount'],
