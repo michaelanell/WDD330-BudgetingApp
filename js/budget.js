@@ -298,21 +298,26 @@ function drawCustom() {
 
 function selectRecommended() {
     user.selectedPlan = "Recommended";
+    window.localStorage.setItem("user", JSON.stringify(user));
+
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
 }
 
 function selectOption2() {
     user.selectedPlan = "Option2";
+    window.localStorage.setItem("user", JSON.stringify(user));
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
 }
 
 function selectOption3() {
     user.selectedPlan = "Option3";
+    window.localStorage.setItem("user", JSON.stringify(user));
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
 }
 
 function selectCustom() {
     user.selectedPlan = "Custom";
+    window.localStorage.setItem("user", JSON.stringify(user));
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
 }
 
