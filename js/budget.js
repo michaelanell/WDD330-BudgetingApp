@@ -192,7 +192,8 @@ function drawOptionOne() {
         ['Other',  user.other],
         ['Groceries', user.grocery],
         ['Unexpected Expenses', user.unexpectedExpenses],
-        ['Entertainment', user.misc]
+        ['Entertainment', user.misc],
+        ['Savings', user.savings]
 
       ]);
 
@@ -222,7 +223,8 @@ function drawOptionTwo() {
         ['Other Fixed',  user.other],
         ['Groceries', user.grocery],
         ['Unexpected Expenses', user.unexpectedExpenses],
-        ['Entertainment', user.misc]
+        ['Entertainment', user.misc],
+        ['Savings', user.savings]
 
       ]);
 
@@ -252,7 +254,8 @@ function drawOptionThree() {
         ['Other',  user.other],
         ['Groceries', user.grocery],
         ['Unexpected Expenses', user.unexpectedExpenses],
-        ['Entertainment', user.misc]
+        ['Entertainment', user.misc],
+        ['Savings', user.savings]
 
       ]);
 
@@ -281,7 +284,8 @@ function drawCustom() {
         ['Other',  user.other],
         ['Groceries', user.grocery],
         ['Unexpected Expenses', user.unexpectedExpenses],
-        ['Entertainment', user.misc]
+        ['Entertainment', user.misc],
+        ['Savings', user.savings]
 
       ]);
 
