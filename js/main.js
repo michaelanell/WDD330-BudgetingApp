@@ -17,8 +17,8 @@ function redirect(event) {
         window.location.href = baseURL + "budget.html";
 
 
-    } else if (result == "Create a Savings Goal") {
-        window.location.href = baseURL + "savings.html";
+    } else if (result == "View Your Budget") {
+        window.location.href = baseURL + "yourplan.html";
 
 
     } else {
