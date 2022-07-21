@@ -78,6 +78,7 @@ input {
 
 #income-explanation {
     font-style: italic;
+    background-color:#FAA0FA;
 }
 
 #other_expenses_amount {
@@ -93,5 +94,9 @@ input {
 }
 
 #customize_plan {
+    display: none;
+}
+
+.temp_hide {
     display: none;
 }

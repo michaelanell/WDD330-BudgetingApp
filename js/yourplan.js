@@ -34,7 +34,7 @@ function drawChart() {
 
     var options = {
         'legend':'bottom',
-        'title': 'Your current monthly expenses breakdown'
+        'title': 'Your Monthly Budget'
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('display_user_plan'));
