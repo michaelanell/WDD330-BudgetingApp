@@ -1,4 +1,5 @@
 import {user} from './budget.js';
+console.log(user.rent);
 google.charts.load('current', {'packages':['corechart']});
 window.addEventListener('load', displayPlan);
 
