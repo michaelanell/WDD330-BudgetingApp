@@ -1,5 +1,5 @@
 //import {drawChart} from 'chart.js';
-
+import {user} from './user.js';
 
 google.charts.load('current', {'packages':['corechart']});
 const budgetForm = document.forms['user-info'];
@@ -34,27 +34,7 @@ function getBudget(event) {
     google.charts.setOnLoadCallback(drawOptionThree);
 }
 
-// Create a user object that hold's users financial information
-const user = {
-    income : 0,
-    numPeople: 0,
-    rent: 0,
-    utilities: 0,
-    carPayment: 0,
-    school: 0,
-    carInsurance: 0,
-    donations: 0,
-    subscriptions: 0,
-    phoneBill: 0,
-    other: 0,
-    remaining: 0,
-    grocery: 0,
-    unexpectedExpenses: 0,
-    savings: 0,
-    misc: 0,
-    selectedPlan: ""
 
-}
 
 ////////////////////////////////////// Compute values //////////////////////////////////////
 function collectValues() {
@@ -336,4 +316,3 @@ function selectCustom() {
     window.location.href = "https://michaelanell.github.io/WDD330-BudgetingApp/yourplan.html";
 }
 
-export {user};
