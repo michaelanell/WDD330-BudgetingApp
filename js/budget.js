@@ -208,8 +208,13 @@ function drawOptionOne() {
 }
 
 function drawOptionTwo() {
+    let grocery = user.grocery * .75;
+    let misc = user.misc * .75;
+    let unexpected = user.unexpectedExpenses * .75 ;
+    let savings = user.savings + (user.grocery - grocery) + (user.misc - misc) + (user.unexpectedExpenses -unexpected);
 
     var data = google.visualization.arrayToDataTable([
+      
         ['Expense', 'Amount'],
         ['Rent/Mortgage', user.rent],
         ['Car Payment', user.carPayment],
@@ -221,10 +226,10 @@ function drawOptionTwo() {
         ['Donations', user.donations],
         ['Subscriptions', user.subscriptions],
         ['Other Fixed',  user.other],
-        ['Groceries', user.grocery],
-        ['Unexpected Expenses', user.unexpectedExpenses],
-        ['Entertainment', user.misc],
-        ['Savings', user.savings]
+        ['Groceries', grocery],
+        ['Unexpected Expenses', unexpected],
+        ['Entertainment', misc],
+        ['Savings', savings]
 
       ]);
 
